@@ -1,0 +1,17 @@
+{
+  "spanish": {
+    "mild": ["tonto", "idiota", "estupido"],
+    "moderate": ["mierda", "imbecil", "gilipollas"],
+    "severe": ["joder", "coño", "puta"]
+  },
+  "catalan": {
+    "mild": ["ximple", "idiota", "estúpid"],
+    "moderate": ["merda", "imbècil", "capullo"],
+    "severe": ["cony", "puta", "collons"]
+  },
+  "english": {
+    "mild": ["stupid", "idiot", "dumb"],
+    "moderate": ["shit", "ass", "bastard"],
+    "severe": ["fuck", "cunt", "bitch"]
+  }
+}
