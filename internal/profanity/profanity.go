@@ -23,7 +23,7 @@ type LanguageProfanity struct {
 }
 
 // ProfanityDatabase holds profanity words for different languages
-type ProfranityDatabase struct {
+type ProfanityDatabase struct {
 	Spanish LanguageProfanity `json:"spanish"`
 	Catalan LanguageProfanity `json:"catalan"`
 	English LanguageProfanity `json:"english"`
@@ -31,7 +31,7 @@ type ProfranityDatabase struct {
 
 // Filter is a profanity filter that checks messages for prohibited words
 type Filter struct {
-	db          ProfranityDatabase
+	db          ProfanityDatabase
 	minSeverity Severity
 }
 
@@ -42,7 +42,7 @@ func NewFilter(databasePath string, minSeverity Severity) (*Filter, error) {
 		return nil, err
 	}
 
-	var db ProfranityDatabase
+	var db ProfanityDatabase
 	if err := json.Unmarshal(data, &db); err != nil {
 		return nil, err
 	}
@@ -55,7 +55,7 @@ func NewFilter(databasePath string, minSeverity Severity) (*Filter, error) {
 
 // ContainsProfamity checks if a message contains profanity
 // Returns true if profanity is found, false otherwise
-func (f *Filter) ContainsProfatiny(message string) bool {
+func (f *Filter) ContainsProfanity(message string) bool {
 	// Convert message to lowercase for case-insensitive matching
 	lowerMessage := strings.ToLower(message)
 
